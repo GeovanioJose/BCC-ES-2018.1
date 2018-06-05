@@ -1,0 +1,10 @@
+package siga
+
+class Disciplina {
+	String nome
+	String ementa
+	String periodo
+
+    static constraints = {
+    }
+}

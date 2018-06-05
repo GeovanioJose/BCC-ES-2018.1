@@ -1,0 +1,12 @@
+package siga
+
+class Matricula {
+	Aluno aluno
+	Disciplina disciplina
+	
+	static hasMany = [disciplina:Disciplina]
+	
+
+    static constraints = {
+    }
+}

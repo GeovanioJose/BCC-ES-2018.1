@@ -1,0 +1,20 @@
+package siga
+
+class Aluno {
+	String nome
+	Date dataNascimento
+	String email
+	String telefone
+	String matricula
+	List disciplinas
+	
+	static hasMany = [disciplinas:Disciplina]
+	
+    static constraints = {
+		nome size:3..30, blank: false
+		dataNascimento max: new Date(), blank: false
+		email size: 5..30, blank: false
+		telefone size: 8..12, blank: false
+		matricula size: 6..11, blank: false
+    }
+}

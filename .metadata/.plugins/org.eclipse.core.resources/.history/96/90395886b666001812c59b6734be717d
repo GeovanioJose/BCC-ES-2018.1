@@ -1,0 +1,7 @@
+package siga
+
+class Aluno {
+
+    static constraints = {
+    }
+}

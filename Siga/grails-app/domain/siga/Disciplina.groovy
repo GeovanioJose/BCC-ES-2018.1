@@ -1,0 +1,22 @@
+package siga
+
+class Disciplina {
+	String nome
+	String ementa
+	String periodo
+		
+	static hasMany = [alunos:Aluno]
+	
+    static constraints = {
+		nome size: 2..20, unique:true, blank: false
+		ementa minSize: 10, blank: false
+		periodo inList:["Primeiro","Segundo","Terceiro","Quarto",
+			"Quinto","Sexto","Setimo","Oitavo","Nono","Decimo"]
+    }
+
+	@Override
+	public String toString() {
+		return "nome"
+	}
+	
+}

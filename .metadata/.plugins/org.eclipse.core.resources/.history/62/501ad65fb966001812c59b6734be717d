@@ -1,0 +1,13 @@
+package siga
+
+class Disciplina {
+	String nome
+	String ementa
+	String periodo
+
+    static constraints = {
+		nome size: 2..20, blank: false
+		ementa minSize: 10, blank: false
+		periodo inList:["Primeiro","Segundo","Terceiro","Quarto","Quinto","Sexto","Sétimo","Oitavo","Nono","Décimo"]
+    }
+}
