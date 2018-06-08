@@ -12,11 +12,9 @@ class Disciplina {
 		ementa minSize: 10, blank: false
 		periodo inList:["Primeiro","Segundo","Terceiro","Quarto",
 			"Quinto","Sexto","Setimo","Oitavo","Nono","Decimo"]
-    }
-
-	@Override
-	public String toString() {
+    }
+    @Override
+    public String toString() {
 		return "nome"
-	}
-	
+    }	
 }
