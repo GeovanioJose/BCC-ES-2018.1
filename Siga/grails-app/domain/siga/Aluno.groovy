@@ -16,12 +16,9 @@ class Aluno {
 		email email:true, unique:true, blank: false
 		telefone size: 8..12, blank: false
 		matricula size:6..11, unique:true, blank: false
-    }
-	@Override
-	public String toString() {
-		return "Aluno [nome=" + nome + "]";
-	}
-    static mapping = {
-	    disciplinas cascade: "all-delete-orphan"
+    }
+    @Override
+    public String toString() {
+	return "[" + nome + "]";
     }
 }
