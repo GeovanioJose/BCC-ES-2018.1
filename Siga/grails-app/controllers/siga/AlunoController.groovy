@@ -75,7 +75,10 @@ class AlunoController {
 
     @Transactional
     def delete(Aluno alunoInstance) {
-
+        def tmp = []
+		alunoInstance.disciplinas.each {tmp << it}
+		tmp.each {alunoInstance.removeFromDisciplinas (it)}
+		alunoInstance.delete ()
         if (alunoInstance == null) {
             notFound()
             return
