@@ -75,10 +75,12 @@ class DisciplinaController {
 
     @Transactional
     def delete(Disciplina disciplinaInstance) {
-        disciplinaInstance.alunos.clear()
-		disciplinaInstance.save (failOnError: true) 
-		
-		if (disciplinaInstance == null) {
+        def tmp = []
+	disciplinaInstance.alunos.each {tmp << it}
+	tmp.each {disciplinaInstance.removeFromAlunos (it)}
+	disciplinaInstance.delete ()
+ 		
+	if (disciplinaInstance == null) {
             notFound()
             return
         }
